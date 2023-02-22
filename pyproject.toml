@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "medievalization"
+version = "0.2022.12.14.1"
+description = "Not Civilization."
+license = "GPL-3.0-only"
+authors = ["Virinas-code <alexcode228@gmail.com>", "ZeBox <anonymous@example.com>"]
+maintainers = ["Virinas-code <alexcode228@gmail.com>"]
+
+packages = [
+    { include = "medievalization" },
+]
+
+homepage = "https://github.com/Virinas-code/medievalization"
+repository = "https://github.com/Virinas-code/medievalization"
+documentation = "https://github.com/Virinas-code/medievalization/wiki"
+
+keywords = ["game"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Web Environment",
+    "Framework :: Flask",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: French",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: JavaScript",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Games/Entertainment",
+    "Topic :: Games/Entertainment :: Real Time Strategy",
+    "Typing :: Typed"
+]
+
+readme = "README.md"
+include = ["README.md", "LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^2.2.3"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+medievalization-server = "medievalization.__main__:main"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/Virinas-code/medievalization/issues"
+"Contribute" = "https://github.com/Virinas-code/medievalization/pulls"
+"Tests" = "https://github.com/Virinas-code/medievalization/actions"
+"Safety" = "https://github.com/Virinas-code/medievalization/security"
+"Statistics" = "https://github.com/Virinas-code/medievalization/pulse"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
