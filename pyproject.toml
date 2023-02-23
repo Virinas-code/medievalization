@@ -52,6 +52,13 @@ medievalization-server = "medievalization.__main__:main"
 "Safety" = "https://github.com/Virinas-code/medievalization/security"
 "Statistics" = "https://github.com/Virinas-code/medievalization/pulse"
 
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.0.1"
+flake8 = "^6.0.0"
+black = "^23.1.0"
+pycodestyle = "^2.10.0"
+pylint = "^2.16.2"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
