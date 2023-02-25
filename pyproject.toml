@@ -39,6 +39,10 @@ include = ["README.md", "LICENSE"]
 [tool.poetry.dependencies]
 python = "^3.11"
 Flask = "^2.2.3"
+google-auth = "^2.16.1"
+google-auth-oauthlib = "^1.0.0"
+google-auth-httplib2 = "^0.1.0"
+google-api-python-client = "^2.79.0"
 
 [tool.poetry.dev-dependencies]
 
@@ -58,6 +62,9 @@ flake8 = "^6.0.0"
 black = "^23.1.0"
 pycodestyle = "^2.10.0"
 pylint = "^2.16.2"
+jupyter = "^1.0.0"
+notebook = "^6.5.2"
+types-requests = "^2.28.11.14"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

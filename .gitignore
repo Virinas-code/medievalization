@@ -1,0 +1,8 @@
+conf/ssl/
+conf/google-*.json
+
+.vscode
+.mypy_cache
+.ipynb_checkpoints
+
+*.map

@@ -18,4 +18,9 @@ module: ModuleType = importlib.import_module("app.server")
 
 if __name__ == "__main__":
     app: Flask = module.server
-    app.run("localhost", port=8080, debug=True)
+    app.run(
+        "0.0.0.0",
+        port=443,
+        debug=True,
+        ssl_context=("conf/ssl/v2/cert.crt", "conf/ssl/v2/key.key"),
+    )
