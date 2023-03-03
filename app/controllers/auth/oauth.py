@@ -43,4 +43,4 @@ def done() -> Response:
 
     :return Response: OAuth done page.
     """
-    return render_template("oauth.html")
+    return render_template("auth/oauth-done.html")
