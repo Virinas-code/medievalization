@@ -4,7 +4,10 @@ Medievalization
 
 Login page
 """
-from flask import Response, make_response, redirect, render_template, request
+from flask import Response, request
+
+from app.http.returns import redirect, render_template
+from modules.auth import login as login_func
 
 
 def login() -> Response:
@@ -15,6 +18,11 @@ def login() -> Response:
 
     :return Response: Login page or redirection if POST.
     """
+    error: str = ""
     if request.method == "POST":
-        return make_response(redirect("/"))
-    return make_response(render_template("login.html"))
+        if login_func(
+            username=request.form["mail"], password=request.form["password"]
+        ):
+            return redirect("/app")
+        error = "Invalid credentials"
+    return render_template("auth/login.html", error=error)

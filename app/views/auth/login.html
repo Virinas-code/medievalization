@@ -1,0 +1,15 @@
+{% extends "auth/template.html" %}
+
+{% block title %}Login{% endblock %}
+{% block subtitle %}Login to your Medievalization account{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+ <label for="mail">Nom d'utilisateur</label>
+ <input type="text" autocomplete="email" id="mail" name="mail" />
+ <label for="mail">Nom d'utilisateur</label>
+ <input type="password" autocomplete="current-password" id="password" name="password" />
+ {% if error|length %}<p class="error">{{ error }}</p>{% endif %}
+ <input type="submit" value="Connexion" />
+</form>
+{% endblock %}

@@ -1,22 +1,26 @@
-<!DOCTYPE html>
- <html lang="fr">
-  <head>
-   <title>Medievalization - Authentification - {% block title %}{% endblock %}</title>
-   <meta charset="utf-8" />
-   <link rel="stylesheet" href="/public/ui/auth/css/styles.css" />
-  </head>
-  <body>
-   <main>
-    <header>
-     <h1>Medievalization</h1>
-     <h2>{% block subtitle %}{% endblock %}</h2>
-    </header>
-    <section>
-     <!-- Begin of page content -->
-{% block content %}{% endblock %}
-     <!-- End of page content -->
-    </section>
-   </main>
-  </body>
- </html>
-<!-- END -->
+{% extends "base.html" %}
+
+{% block base_title %}Authentification - {% block title %}ERR500{% endblock %}{% endblock %}
+
+{% block base_head %}
+<link rel="stylesheet" href="/public/ui/auth/css/styles.css" />
+
+<!-- This block was dynamically generated with Jinja 2 -->
+{% block head %}
+{% endblock %}
+
+{% endblock %}
+
+{% block base_body %}
+<main>
+ <header>
+  <h1>Medievalization</h1>
+  <h2>{% block subtitle %}{% endblock %}</h2>
+ </header>
+ <section>
+  <!-- This block was dynamically generated with Jinja 2 -->
+  {% block content %}
+  {% endblock %}
+ </section>
+</main>
+{% endblock %}

@@ -20,7 +20,7 @@ if __name__ == "__main__":
     app: Flask = module.server
     app.run(
         "0.0.0.0",
-        port=443,
+        port=4443,
         debug=True,
         ssl_context=("conf/ssl/v2/cert.crt", "conf/ssl/v2/key.key"),
     )
