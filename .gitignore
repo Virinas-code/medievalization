@@ -6,3 +6,6 @@ conf/google-*.json
 .ipynb_checkpoints
 
 *.map
+
+# Sometimes VS Code does weird things
+.metals/metals.lock.db

@@ -10,12 +10,14 @@ body {
     justify-content: center;
     flex-grow: 1;
 
-    background-color: brown;
+    background-color: var(--game-color-background);
 }
 
 main {
-    width: 300px;
-    height: 500px;
+    width: 400px;
+    height: 600px;
+    padding: 10px;
 
-    background-color: dimgrey;
+    background-color: var(--game-color-over);
+    color: var(--game-color-foreground);
 }

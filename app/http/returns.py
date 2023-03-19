@@ -9,28 +9,25 @@ from typing import Any, Callable, List, Union
 import flask
 from flask import Response, make_response
 from jinja2.environment import Template
-from typing_extensions import Protocol
-
-
-class RenderTemplate(Protocol):
-    """render_template annotation."""
-
-    def __call__(
-        self,
-        template_name_or_list: Union[
-            str, Template, List[Union[str, Template]]
-        ],
-        **context: Any
-    ) -> Response:
-        ...
-
 
 redirect: Callable[[str], Response] = lambda url: make_response(
     flask.redirect(url)
 )
 
-render_template: RenderTemplate = (
-    lambda template_name_or_list, **context: make_response(
+
+def render_template(
+    template_name_or_list: Union[str, Template, List[str | Template]],
+    **context: Any
+) -> Response:
+    """
+    Render a template by name with the given context.
+
+    :param Union[str, Template, List[str | Template]] template_name_or_list:
+        The name of the template to render. If
+        a list is given, the first name to exist will be rendered.
+    :param Any context: The variables to make available in the template.
+    :return Response: A valid Flask reponse.
+    """
+    return make_response(
         flask.render_template(template_name_or_list, **context)
     )
-)
