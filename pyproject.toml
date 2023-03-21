@@ -38,7 +38,7 @@ include = ["README.md", "LICENSE"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Flask = "^2.2.2"
+Flask = "^2.2.3"
 
 [tool.poetry.dev-dependencies]
 
