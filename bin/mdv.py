@@ -17,11 +17,20 @@ logger: logs.VerboseLogger = logs.VerboseLogger("mdv", level=logging.NOTSET)
 
 @click.group
 def build() -> None:
-    pass
+    """
+    Build sources and CSS.
+
+    Actually does nothing lol.
+    """
 
 
 @click.command
 def build_sources() -> None:
+    """
+    Build TypeScript sources.
+
+    Why are you looking at old code.
+    """
     print("ts stuff")
 
 

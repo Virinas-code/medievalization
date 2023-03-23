@@ -37,7 +37,7 @@ def build_styles() -> None:
     # Make compiled files
     for directory in glob.glob("ui/**/css"):
         directives: list[str] = [
-            "/* MDV: This file was automatically generated. */"
+            "/* MDV: This file was automatically generated. */\n\n"
         ]
 
         for file in glob.glob(f"{directory}/*.css"):
