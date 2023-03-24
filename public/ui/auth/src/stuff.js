@@ -1,3 +1,3 @@
-var hello = "Hello World! aaaaaa";
+let hello = "Hello World! aaaaaa";
 console.log(hello);
 //# sourceMappingURL=stuff.js.map

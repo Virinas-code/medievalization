@@ -12,6 +12,7 @@ import flask
 
 from app.controllers.auth import auth_blueprint
 from modules.i18n import load_trans
+from modules.i18n.languages import LANGUAGES
 
 server: flask.Flask = flask.Flask(
     "medievalization",
@@ -30,14 +31,7 @@ def inject_translations() -> dict[str, Any]:
     :return dict[str, Any]: Variables for Jinja templates.
     """
     print("inject", file=sys.stderr)
-    return {"trans": load_trans()}
+    return {"trans": load_trans(), "languages": LANGUAGES}
 
 
 server.register_blueprint(auth_blueprint)
-
-
-@server.route("/dev")
-def test_route():
-    """Test."""
-    flask.session["i18n.language"] = "fr"
-    return "OK"

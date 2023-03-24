@@ -1,11 +1,16 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "AMD",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
         "outDir": "../public/ui/",
         "rootDir": "./",
-        "sourceMap": true
+        "sourceMap": true,
+        "target": "ES6",
+        "baseUrl": "/public/",
+        "paths": {
+            "*": ["*", "ui/*"]
+        }
     }
 }

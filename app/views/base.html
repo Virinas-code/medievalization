@@ -4,6 +4,11 @@
    <title>Medievalization - {% block base_title %}ERR500{% endblock %}</title>
    <meta charset="utf-8" />
    <link rel="stylesheet" href="/public/ui/shared/css/styles.css" />
+   <link rel="stylesheet" href="/public/ui/root/css/base.css" />
+   <link rel="stylesheet" href="/public/ui/components/css/styles.css" />
+
+   <script src="/public/ui/root/src/base.js"></script>
+   <script type="module" src="/public/ui/components/src/sources.js"></script>
    
    <!-- This block was dynamically generated with Jinja 2 -->
    {% block base_head %}
@@ -13,6 +18,18 @@
    <!-- This block was dynamically generated with Jinja 2 -->
    {% block base_body %}
    {% endblock %}
+
+   <div id="language" class="scbo">
+    <img alt="Current language flag" />
+    <div class="disabled">
+     {% for language in languages %}
+      <div data-lang="{{ language.language }}">
+       <img src="/public/images/flags/{{ language.code }}.svg" alt="{{ language.name }} flag"/>
+       {{ language.name }}
+      </div>
+     {% endfor %}
+    </div>
+   </div>
   </body>
  </html>
 <!-- END -->
