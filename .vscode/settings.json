@@ -1,5 +1,6 @@
 {
-    "python.analysis.diagnosticSeverityOverrides": {
-        "reportShadowedImports": "none"
+    "esbonio.sphinx.confDir": "",
+    "files.watcherExclude": {
+        "**/target": true
     }
 }

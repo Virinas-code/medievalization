@@ -1,0 +1,15 @@
+{% extends "auth/template.html" %}
+
+{% block title %}{{ trans.auth.login.login_title }}{% endblock %}
+{% block subtitle %}{{ trans.auth.login.login_to }}{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+ <label for="mail">{{ trans.auth.login.lbl_username }}</label>
+ <input type="text" autocomplete="email" id="mail" name="mail" />
+ <label for="password">{{ trans.auth.login.lbl_password }}</label>
+ <input type="password" autocomplete="current-password" id="password" name="password" />
+ {% if error|length %}<p class="error">{{ error }}</p>{% endif %}
+ <input type="submit" value="{{ trans.auth.login.send }}" />
+</form>
+{% endblock %}

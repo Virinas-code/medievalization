@@ -1,0 +1,22 @@
+{
+    "login_title": {
+        "en": "Login",
+        "fr": "Connexion"
+    },
+    "login_to": {
+        "en": "Login to your Medievalization account",
+        "fr": "Connectez vous à votre compte Medievalization"
+    },
+    "lbl_username": {
+        "en": "Username:",
+        "fr": "Nom d'utilisateur :"
+    },
+    "lbl_password": {
+        "en": "Password:",
+        "fr": "Mot de passe :"
+    },
+    "send": {
+        "en": "Login",
+        "fr": "Connexion"
+    }
+}

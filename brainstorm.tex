@@ -1,0 +1,474 @@
+\begin{math}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\author{}
+\date{}
+\begin{document}
+\hypertarget{medievalization}{%
+\section{Medievalization}\label{medievalization}}
+\hypertarget{brainstorming}{%
+\subsection{Brainstorming}\label{brainstorming}}
+\hypertarget{map}{%
+\subsubsection{Map}\label{map}}
+\begin{itemize}
+\tightlist
+\item
+  Tuiles
+  \begin{itemize}
+  \tightlist
+  \item
+    1 hectare
+  \end{itemize}
+\item
+  Routes
+  \begin{itemize}
+  \tightlist
+  \item
+    Connecter ressources, chateaux
+  \item
+    Voyage beaucoup plus rapide
+  \end{itemize}
+\item
+  Rivières
+  \begin{itemize}
+  \tightlist
+  \item
+    Bateaux
+  \item
+    Ports
+  \item
+    Transport de troupes ou de marchandises
+  \item
+    Peut couler (aléatoire quasi constant)
+  \end{itemize}
+\end{itemize}
+\hypertarget{ressources}{%
+\subsubsection{Ressources}\label{ressources}}
+\begin{itemize}
+\tightlist
+\item
+  Early game : Bois
+  \begin{itemize}
+  \tightlist
+  \item
+    Parcelles de forêt
+    \begin{itemize}
+    \tightlist
+    \item
+      Option replantage late game
+    \item
+      Exploitées par ouvriers
+    \item
+      Automatisable (affecter ouvriers)
+    \end{itemize}
+  \end{itemize}
+\item
+  Bouffe
+  \begin{itemize}
+  \tightlist
+  \item
+    Parcelle défrichée
+    \begin{itemize}
+    \tightlist
+    \item
+      Champs
+      \begin{itemize}
+      \tightlist
+      \item
+        Céréales
+      \item
+        Élevages
+      \item
+        Vignes
+      \item
+        Pas petits
+      \end{itemize}
+    \end{itemize}
+  \item
+    Différents types de nourriture
+    \begin{itemize}
+    \tightlist
+    \item
+      Viande / Céréales
+    \item
+      Alimentation équilibrée
+    \end{itemize}
+  \item
+    Aléas climatiques
+    \begin{itemize}
+    \tightlist
+    \item
+      Récoltes plus ou moins bonnes
+    \end{itemize}
+  \item
+    Chasse
+    \begin{itemize}
+    \tightlist
+    \item
+      Ouvriers chasseurs
+    \item
+      Rapporte de la viande
+    \item
+      En forêt
+      \begin{itemize}
+      \tightlist
+      \item
+        Moins perf qu'élevage mais plus simple
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\item
+  Vin
+  \begin{itemize}
+  \tightlist
+  \item
+    Batiment cuverie
+    \begin{itemize}
+    \tightlist
+    \item
+      Produit vin
+    \item
+      Prends raisins
+    \end{itemize}
+  \end{itemize}
+\item
+  Pierre
+  \begin{itemize}
+  \tightlist
+  \item
+    Parcelle carrière (spawn naturel)
+    \begin{itemize}
+    \tightlist
+    \item
+      Aménagé pour carrière
+    \item
+      Différent types et qualités de pierres
+    \end{itemize}
+  \item
+    Différents niveaux
+    \begin{itemize}
+    \tightlist
+    \item
+      Forme, production\ldots{}
+    \end{itemize}
+  \end{itemize}
+\item
+  Fer
+  \begin{itemize}
+  \tightlist
+  \item
+    Parcelle mine
+    \begin{itemize}
+    \tightlist
+    \item
+      Aménagée, comme les carrières
+    \end{itemize}
+  \item
+    Bien plus rare
+    \begin{itemize}
+    \tightlist
+    \item
+      Exploration ?
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\hypertarget{structure}{%
+\subsubsection{Structure}\label{structure}}
+\begin{itemize}
+\tightlist
+\item
+  Early game : Camp
+\item
+  Construit une parcelle de chateau
+  \begin{itemize}
+  \tightlist
+  \item
+    Défricheé
+  \item
+    Palissade en bois
+  \end{itemize}
+\item
+  Parcelles de ville
+  \begin{itemize}
+  \tightlist
+  \item
+    Accueillent 100 batiments chacunes
+  \item
+    Construire des batiments
+    \begin{itemize}
+    \tightlist
+    \item
+      Maison (L1: 5 habitants, bois)
+    \item
+      Entrepôts (s'étendent sur plusieurs tuiles, stocker des ressources
+      (quantité varie avec le niveau))
+    \item
+      Lieu de culte
+    \item
+      Taverne
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\hypertarget{uxe9glise}{%
+\paragraph{Église}\label{uxe9glise}}
+\begin{itemize}
+\tightlist
+\item
+  Gérent différentes structures
+  \begin{itemize}
+  \tightlist
+  \item
+    Écoles
+  \item
+    Hopitaux
+  \end{itemize}
+\item
+  Soutien
+  \begin{itemize}
+  \tightlist
+  \item
+    Militaire ponctuel
+  \item
+    Technologique
+  \item
+    Politique (si tu te mets l'église a dos tu es dead lol)
+  \end{itemize}
+\end{itemize}
+\hypertarget{ouvriers}{%
+\subsubsection{Ouvriers}\label{ouvriers}}
+\begin{itemize}
+\tightlist
+\item
+  Ouvriers plus expérimentés avec le temps
+  \begin{itemize}
+  \tightlist
+  \item
+    Plus rapide si avec ouvrier expérimenté
+  \end{itemize}
+\item
+  Expérience décroit si ne fait pas la tache
+  \begin{itemize}
+  \tightlist
+  \item
+    Mais paliers pour ne pas revenir à 0
+  \end{itemize}
+\item
+  Mourrir
+  \begin{itemize}
+  \tightlist
+  \item
+    Perdent leurs connaissances si personne ne l'a appris
+    \begin{itemize}
+    \tightlist
+    \item
+      Systeme maitre eleve
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\hypertarget{combat--duxe9fense}{%
+\subsubsection{Combat / défense}\label{combat--duxe9fense}}
+\begin{itemize}
+\tightlist
+\item
+  Brigands (pillent les chateaux, butent des ouvriers)
+  \begin{itemize}
+  \tightlist
+  \item
+    Construire palissade / miradors / pont-levis / douves
+  \end{itemize}
+\end{itemize}
+\hypertarget{artisan}{%
+\subsubsection{Artisan}\label{artisan}}
+\begin{itemize}
+\tightlist
+\item
+  Constructeur
+  \begin{itemize}
+  \tightlist
+  \item
+    Macon, tailleur de pierre, charpentier
+    \begin{itemize}
+    \tightlist
+    \item
+      Via technologie, découverte naturellement par les ouvriers
+      \begin{itemize}
+      \tightlist
+      \item
+        Chateaux
+      \item
+        Eglise
+      \item
+        NON LINEAIRE!!! (genre peuvent decouvrir autres trucs en
+        premier)
+      \end{itemize}
+    \end{itemize}
+  \item
+    Travaille sur chantiers (construction)
+  \end{itemize}
+\item
+  Forgeron
+  \begin{itemize}
+  \tightlist
+  \item
+    Travaille fer
+    \begin{itemize}
+    \tightlist
+    \item
+      Armes
+    \item
+      Outils
+    \item
+      Utilisé pour améliorer certains batiments
+    \item
+      Armure
+    \end{itemize}
+  \end{itemize}
+\item
+  Paysan
+  \begin{itemize}
+  \tightlist
+  \item
+    Bucherons
+  \item
+    Agriculteurs
+  \end{itemize}
+\item
+  Religieux
+  \begin{itemize}
+  \tightlist
+  \item
+    Peu de contrôle
+  \item
+    Gérent les batiments religieux
+  \end{itemize}
+\item
+  Artisans de bouche (a revoir)
+\item
+  Armée
+  \begin{itemize}
+  \tightlist
+  \item
+    Soldats et les gardes
+  \item
+    Entrainement / Expérience
+  \end{itemize}
+\item
+  Marin
+  \begin{itemize}
+  \tightlist
+  \item
+    Conducteur, docker
+  \end{itemize}
+\end{itemize}
+\hypertarget{faction}{%
+\subsubsection{Faction}\label{faction}}
+\begin{itemize}
+\tightlist
+\item
+  Créée par les joueurs
+\item
+  Se rassemble généralement par zone géographique
+\item
+  Chat de faction
+\end{itemize}
+\hypertarget{actions}{%
+\subsubsection{Actions}\label{actions}}
+\begin{itemize}
+\tightlist
+\item
+  Programmer les ouvriers
+\item
+  Envoyer des soldats
+  \begin{itemize}
+  \tightlist
+  \item
+    Éclairerurs
+  \item
+    Attaque
+  \end{itemize}
+\item
+  Gérer la faction
+  \begin{itemize}
+  \tightlist
+  \item
+    Pas de facilité dans les alliances
+  \end{itemize}
+\item
+  Explorer
+\item
+  Commerce
+  \begin{itemize}
+  \tightlist
+  \item
+    Adminshop (villes franches, citadelles)
+  \item
+    Market (vente des joueurs)
+  \item
+    Troc
+    \begin{itemize}
+    \tightlist
+    \item
+      Temps transport marchandises
+    \end{itemize}
+  \end{itemize}
+\item
+  Politique
+\end{itemize}
+\hypertarget{aluxe9as}{%
+\subsubsection{Aléas}\label{aluxe9as}}
+\begin{itemize}
+\tightlist
+\item
+  Climatiques
+\item
+  Épidémies
+\item
+  Invasions
+\item
+  Naufrages / attaques de convois
+\end{itemize}
+\end{document}
+\end{math}

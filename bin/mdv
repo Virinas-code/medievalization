@@ -1,0 +1,75 @@
+#!/usr/bin/bash
+
+python -m modules.mdv $@
+
+# log() {
+#     echo -e "\e[1;37m[  \e[1;32m$1\t\e[1;37m  ] \e[0;37m$2"
+# }
+
+# build_src() {
+#     log "build_source" "Building source"
+#     cd ui
+#     tsc --build --pretty --verbose
+#     cd ..
+# }
+
+# build_css() {
+#     log "build_styles" "Building styles"
+#     for f in ui/*/css/* ; do
+#         mkdir -p "$(dirname "public/$f")" && cp "$f" "public/$f"
+#     done
+#     log "build_styles" "Compiling CSS"
+#     bin/tools/compile_css.py
+# }
+
+# build() {
+#     case $1 in
+#         "source")
+#             build_src
+#             ;;
+#         "styles")
+#             build_css
+#             ;;
+#         *)
+#             log "build" "Running \e[0;32mbuild_styles"
+#             build_css
+#             log "build" "Running \e[0;32mbuild_sources"
+#             build_src
+#             ;;
+#     esac            
+# }
+
+# clean() {
+#     log "clean" "Cleaning __pycache__"
+#     sudo find . -type f -name "*.py[co]" -delete
+#     sudo find . -type d -name "__pycache__" -delete
+# }
+
+# start() {
+#     log "start" "Starting debug server"
+#     pythonpath="$(whereis -b python)"
+#     patharray=($pythonpath)
+#     abspath="${patharray[-1]}"
+#     xdg-open "https://medievalization.org" &
+#     sudo "$abspath" "bin/tools/launch.py" ; echo "" ; clean
+# }
+
+# launch() {
+#     log "launch" "Running \e[0;32mbuild"
+#     build
+#     log "launch" "Running \e[0;32mstart"
+#     start
+# }
+
+# # Argument
+# case $1 in
+#     "build")
+#         build $2
+#         ;;
+#     "launch")
+#         launch
+#         ;;
+#     "clean")
+#         clean
+#         ;;
+# esac
