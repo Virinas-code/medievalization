@@ -1,0 +1,30 @@
+name: Bug Report (BETA)
+
+description: |
+  Report a bug found in the app.
+  USE ONLY FOR BUGS, IF A FEATURE IS MISSING USE THE MISSING FEATURE TEMPLATE.
+
+title: "[BUG] "
+
+assignees: 
+  - Virinas-code
+  
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Medievalization
+        ## Issues - Bug Report
+        **Thank you for reporting!**
+        Please fill the following form in order for us to fix the bug.
+  
+  - type: checkboxes
+    attributes:
+      label: "I checked if there was no issues opened for this bug"
+      description: |
+        Check if this bug hasn't been reported already!
+        [Bugs List](https://github.com/Virinas-code/medievalization/issues?q=is%3Aissue+label%3Abug)
+      options:
+        - label: "It's a new bug report"
