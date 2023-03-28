@@ -22,9 +22,41 @@ body:
   
   - type: checkboxes
     attributes:
-      label: "I checked if there was no issues opened for this bug"
+      label: Duplicate check
       description: |
         Check if this bug hasn't been reported already!
         [Bugs List](https://github.com/Virinas-code/medievalization/issues?q=is%3Aissue+label%3Abug)
       options:
-        - label: "It's a new bug report"
+        - label: "No duplicates found"
+    
+    validation:
+      required: true
+  
+  - type: input
+    id: version
+    
+    attributes:
+      label: Version used
+      description: |
+        Which version of Medievalization where you using?
+        Use the following syntax: <WEB|DESKTOP|ANY> <Indev|Alpha|Beta|Stable|Latest> [<Version> [Commit <SHA>]]
+      placeholder: Version used
+      value: WEB Latest
+      
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    
+    attributes:
+      label: Steps to reproduce
+      description: 
+        How can we reproduce this bug in the same conditions?
+        Please provide detailed steps!
+      placeholder: 1. ...
+      value: |
+        1. ...
+    
+    validations:
+      required: true
