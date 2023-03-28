@@ -60,3 +60,27 @@ body:
     
     validations:
       required: true
+
+  - type: textarea
+    id: excepted
+    
+    attributes:
+      label: Excepted results
+      description: 
+        What should have happend?
+      placeholder: "Example: 'Shouldn't crash'"
+    
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    
+    attributes:
+      label: Actual results
+      description: 
+        What happened instead?
+      placeholder: "Example: 'App crashed'"
+    
+    validations:
+      required: true
