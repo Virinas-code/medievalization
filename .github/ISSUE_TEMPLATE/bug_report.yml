@@ -77,8 +77,9 @@ body:
     id: os
     
     attributes:
-      label: Which operating systems have this bug?
+      label: OS
       description: |
+        Which operating systems have this bug?
         Which OS are you using?
         Use "Any" if it work on any OS.
       options:
