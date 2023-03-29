@@ -46,6 +46,51 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: browser
+    
+    attributes:
+      label: Which browsers have this bug?
+      description: |
+        Try with different browsers to check if the bug is still present.
+        Use "Any" if it work on any browser.
+      options:
+        - Any
+        - Firefox
+        - Chrome
+        - Edge
+        - Opera
+        - Safari
+        - Internet Explorer
+        - Mobile browser
+        - Text-mode browser
+        - Other (exotic browser)
+      multiple: true
+    
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    
+    attributes:
+      label: Which operating systems have this bug?
+      description: |
+        Which OS are you using?
+        Use "Any" if it work on any OS.
+      options:
+        - Any
+        - Linux
+        - Windows
+        - Mac OS
+        - Android
+        - iOS
+        - Other
+      multiple: true
+    
+    validations:
+      required: true
+
   - type: textarea
     id: steps
     
