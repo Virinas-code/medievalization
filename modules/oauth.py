@@ -13,8 +13,8 @@ from google.oauth2.credentials import Credentials as OAuthCredentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 
 SCOPES: list[str] = ["https://www.googleapis.com/auth/gmail.send"]
-TOKENS_FILE: str = "conf/google-tokens.json"
-CREDENTIALS_FILE: str = "conf/google-credentials-web.json"
+TOKENS_FILE: str = "conf/google/tokens.json"
+CREDENTIALS_FILE: str = "conf/google/credentials-web.json"
 
 
 class GoogleAuth:

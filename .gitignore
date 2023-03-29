@@ -1,5 +1,5 @@
 conf/ssl/
-conf/google-*.json
+conf/google/
 
 .vscode
 .mypy_cache
