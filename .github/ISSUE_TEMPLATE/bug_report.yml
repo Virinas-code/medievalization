@@ -50,12 +50,15 @@ body:
     id: browser
     
     attributes:
-      label: Which browsers have this bug?
+      label: Web browsers
       description: |
+        Which browsers have this bug?
         Try with different browsers to check if the bug is still present.
         Use "Any" if it work on any browser.
+        Use "Doesn't apply" if you use the desktop app.
       options:
         - Any
+        - "Doesn't apply"
         - Firefox
         - Chrome
         - Edge
