@@ -4,7 +4,6 @@ Medievalization
 
 Main server file
 """
-import sys
 import uuid
 from typing import Any
 
@@ -30,7 +29,7 @@ def inject_translations() -> dict[str, Any]:
 
     :return dict[str, Any]: Variables for Jinja templates.
     """
-    print("inject", file=sys.stderr)
+    # TODO: Store in variable for better performance (called all the time)
     return {"trans": load_trans(), "languages": LANGUAGES}
 
 
