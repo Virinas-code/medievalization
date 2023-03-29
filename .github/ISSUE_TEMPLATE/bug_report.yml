@@ -1,135 +1,132 @@
 name: Bug Report (BETA)
 
 description: |
-  Report a bug found in the app.
-  USE ONLY FOR BUGS, IF A FEATURE IS MISSING USE THE MISSING FEATURE TEMPLATE.
+    Report a bug found in the app.
+    USE ONLY FOR BUGS, IF A FEATURE IS MISSING USE THE MISSING FEATURE TEMPLATE.
 
 title: "[BUG] "
 
-assignees: 
-  - Virinas-code
-  
+assignees:
+    - Virinas-code
+
 labels: ["bug"]
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        # Medievalization
-        ## Issues - Bug Report
-        **Thank you for reporting!**
-        Please fill the following form in order for us to fix the bug.
-  
-  - type: checkboxes
-    attributes:
-      label: Duplicate check
-      description: |
-        Check if this bug hasn't been reported already!
-        [Bugs List](https://github.com/Virinas-code/medievalization/issues?q=is%3Aissue+label%3Abug)
-      options:
-        - label: "No duplicates found"
-    
-    validations:
-      required: true
-  
-  - type: input
-    id: version
-    
-    attributes:
-      label: Version used
-      description: |
-        Which version of Medievalization where you using?
-        Use the following syntax: <WEB|DESKTOP|ANY> <Indev|Alpha|Beta|Stable|Latest> [<Version> [Commit <SHA>]]
-      placeholder: Version used
-      value: WEB Latest
-      
-    validations:
-      required: true
+    - type: markdown
+      attributes:
+          value: |
+              # Medievalization
+              ## Issues - Bug Report
+              **Thank you for reporting!**
+              Please fill the following form in order for us to fix the bug.
 
-  - type: dropdown
-    id: browser
-    
-    attributes:
-      label: Web browsers
-      description: |
-        Which browsers have this bug?
-        Try with different browsers to check if the bug is still present.
-        Use "Any" if it work on any browser.
-        Use "Doesn't apply" if you use the desktop app.
-      options:
-        - Any
-        - "Doesn't apply"
-        - Firefox
-        - Chrome
-        - Edge
-        - Opera
-        - Safari
-        - Internet Explorer
-        - Mobile browser
-        - Text-mode browser
-        - Other (exotic browser)
-      multiple: true
-    
-    validations:
-      required: true
+    - type: checkboxes
+      attributes:
+          label: Duplicate check
+          description: |
+              Check if this bug hasn't been reported already!
+              [Bugs List](https://github.com/Virinas-code/medievalization/issues?q=is%3Aissue+label%3Abug)
+          options:
+              - label: "No duplicates found"
 
-  - type: dropdown
-    id: os
-    
-    attributes:
-      label: OS
-      description: |
-        Which operating systems have this bug?
-        Which OS are you using?
-        Use "Any" if it work on any OS.
-      options:
-        - Any
-        - Linux
-        - Windows
-        - Mac OS
-        - Android
-        - iOS
-        - Other
-      multiple: true
-    
-    validations:
-      required: true
+      validations:
+          required: true
 
-  - type: textarea
-    id: steps
-    
-    attributes:
-      label: Steps to reproduce
-      description: 
-        How can we reproduce this bug in the same conditions?
-        Please provide detailed steps!
-      placeholder: 1. ...
-      value: |
-        1. ...
-    
-    validations:
-      required: true
+    - type: input
+      id: version
 
-  - type: textarea
-    id: excepted
-    
-    attributes:
-      label: Excepted results
-      description: 
-        What should have happend?
-      placeholder: "Example: 'Shouldn't crash'"
-    
-    validations:
-      required: true
+      attributes:
+          label: Version used
+          description: |
+              Which version of Medievalization where you using?
+              Use the following syntax: <WEB|DESKTOP|ANY> <Indev|Alpha|Beta|Stable|Latest> [<Version> [Commit <SHA>]]
+          placeholder: Version used
+          value: WEB Latest
 
-  - type: textarea
-    id: actual
-    
-    attributes:
-      label: Actual results
-      description: 
-        What happened instead?
-      placeholder: "Example: 'App crashed'"
-    
-    validations:
-      required: true
+      validations:
+          required: true
+
+    - type: dropdown
+      id: browser
+
+      attributes:
+          label: Web browsers
+          description: |
+              Which browsers have this bug?
+              Try with different browsers to check if the bug is still present.
+              Use "Any" if it work on any browser.
+              Use "Doesn't apply" if you use the desktop app.
+          options:
+              - Any
+              - "Doesn't apply"
+              - Firefox
+              - Chrome
+              - Edge
+              - Opera
+              - Safari
+              - Internet Explorer
+              - Mobile browser
+              - Text-mode browser
+              - Other (exotic browser)
+          multiple: true
+
+      validations:
+          required: true
+
+    - type: dropdown
+      id: os
+
+      attributes:
+          label: OS
+          description: |
+              Which operating systems have this bug?
+              Which OS are you using?
+              Use "Any" if it work on any OS.
+          options:
+              - Any
+              - Linux
+              - Windows
+              - Mac OS
+              - Android
+              - iOS
+              - Other
+          multiple: true
+
+      validations:
+          required: true
+
+    - type: textarea
+      id: steps
+
+      attributes:
+          label: Steps to reproduce
+          description: How can we reproduce this bug in the same conditions?
+              Please provide detailed steps!
+          placeholder: 1. ...
+          value: |
+              1. ...
+
+      validations:
+          required: true
+
+    - type: textarea
+      id: excepted
+
+      attributes:
+          label: Excepted results
+          description: What should have happend?
+          placeholder: "Example: 'Shouldn't crash'"
+
+      validations:
+          required: true
+
+    - type: textarea
+      id: actual
+
+      attributes:
+          label: Actual results
+          description: What happened instead?
+          placeholder: "Example: 'App crashed'"
+
+      validations:
+          required: true
