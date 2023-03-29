@@ -7,8 +7,8 @@
    <link rel="stylesheet" href="/public/ui/root/css/base.css" />
    <link rel="stylesheet" href="/public/ui/components/css/styles.css" />
 
-   <script src="/public/ui/root/src/base.js"></script>
-   <script type="module" src="/public/ui/components/src/sources.js"></script>
+   <script type="module" src="/public/ui/components/src/components.js"></script>
+   <script type="module" src="/public/ui/root/src/base.js"></script>
    
    <!-- This block was dynamically generated with Jinja 2 -->
    {% block base_head %}
@@ -23,7 +23,7 @@
     <img alt="Current language flag" />
     <div class="disabled">
      {% for language in languages %}
-      <div data-lang="{{ language.language }}">
+      <div data-scboitemid="{{ language.language }}">
        <img src="/public/images/flags/{{ language.code }}.svg" alt="{{ language.name }} flag"/>
        {{ language.name }}
       </div>
