@@ -9,3 +9,7 @@ conf/google/
 
 # Sometimes VS Code does weird things
 .metals/metals.lock.db
+
+# Python compiled files
+__pycache__/
+*.pyc
