@@ -9,8 +9,9 @@ import os
 
 import click
 
+GENERATED: str = "/* MDV: This file was automatically generated. */\n\n"
 
-@click.command()
+
 def build_sources() -> None:
     """Build TypeScript"""
     os.chdir("ui")
@@ -18,7 +19,9 @@ def build_sources() -> None:
     os.chdir("..")
 
 
-@click.command()
+build_sources_command: click.Command = click.command(build_sources)
+
+
 def build_styles() -> None:
     """Build CSS"""
     # Copy files
@@ -29,16 +32,12 @@ def build_styles() -> None:
 
         with open(file, encoding="utf-8") as file_wrapper:
             with open(f"public/{file}", "w", encoding="utf-8") as new_file:
-                new_file.write(
-                    "/* MDV: This file was automatically generated. */\n\n"
-                )
+                new_file.write(GENERATED)
                 new_file.write(file_wrapper.read())
 
     # Make compiled files
     for directory in glob.glob("ui/**/css"):
-        directives: list[str] = [
-            "/* MDV: This file was automatically generated. */\n\n"
-        ]
+        directives: list[str] = [GENERATED]
 
         for file in glob.glob(f"{directory}/*.css"):
             directives.append(f'@import url("/public/{file}");\n')
@@ -51,14 +50,17 @@ def build_styles() -> None:
             compiled_file.writelines(directives)
 
 
+build_styles_command: click.Command = click.command(build_styles)
+
+
 @click.group(invoke_without_command=True)
 @click.pass_context
 def build(ctx: click.Context) -> None:
     """Build CSS and TypeScript."""
     if not ctx.invoked_subcommand:
-        ctx.invoke(build_sources)
-        ctx.invoke(build_styles)
+        build_sources()
+        build_styles()
 
 
-build.add_command(build_sources, "sources")
-build.add_command(build_styles, "styles")
+build.add_command(build_sources_command, "sources")
+build.add_command(build_styles_command, "styles")
