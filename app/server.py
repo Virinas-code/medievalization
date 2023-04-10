@@ -9,9 +9,11 @@ from typing import Any
 
 import flask
 
+from app.controllers.api import api_blueprint
 from app.controllers.auth import auth_blueprint
 from modules.i18n import load_trans
 from modules.i18n.languages import LANGUAGES
+from modules.logs import setup as setup_logs
 
 server: flask.Flask = flask.Flask(
     "medievalization",
@@ -19,6 +21,7 @@ server: flask.Flask = flask.Flask(
     static_folder="public",
     template_folder="app/views",
 )
+setup_logs(server)
 server.secret_key = uuid.uuid4().hex
 
 
@@ -34,3 +37,4 @@ def inject_translations() -> dict[str, Any]:
 
 
 server.register_blueprint(auth_blueprint)
+server.register_blueprint(api_blueprint)

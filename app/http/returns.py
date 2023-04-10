@@ -31,3 +31,12 @@ def render_template(
     return make_response(
         flask.render_template(template_name_or_list, **context)
     )
+
+
+def no_content() -> Response:
+    """
+    Return 204 - No Content.
+
+    :return Response: An empty response.
+    """
+    return make_response(("", 204))
