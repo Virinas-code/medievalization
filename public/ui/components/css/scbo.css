@@ -1,8 +1,31 @@
 /* MDV: This file was automatically generated. */
 
 .scbo {
+    padding: 5px;
+
+    color: var(--game-color-foreground);
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+}
+
+.scbo > .scbo-list.scbo-closed {
+    display: none;
+}
+
+.scbo > .scbo-list.scbo-open {
+    display: flex;
+    flex-direction: column;
+}
+
+.scbo > div {
     border: 1px solid #f48c06;
     border-radius: 5px;
 
-    padding: 5px;
+    width: fit-content;
+}
+
+.scbo > div:first-of-type {
+    margin-top: 5px;
 }
