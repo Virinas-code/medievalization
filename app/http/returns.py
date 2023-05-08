@@ -10,14 +10,11 @@ import flask
 from flask import Response, make_response
 from jinja2.environment import Template
 
-redirect: Callable[[str], Response] = lambda url: make_response(
-    flask.redirect(url)
-)
+redirect: Callable[[str], Response] = lambda url: make_response(flask.redirect(url))
 
 
 def render_template(
-    template_name_or_list: Union[str, Template, List[str | Template]],
-    **context: Any
+    template_name_or_list: Union[str, Template, List[str | Template]], **context: Any
 ) -> Response:
     """
     Render a template by name with the given context.
@@ -28,9 +25,7 @@ def render_template(
     :param Any context: The variables to make available in the template.
     :return Response: A valid Flask reponse.
     """
-    return make_response(
-        flask.render_template(template_name_or_list, **context)
-    )
+    return make_response(flask.render_template(template_name_or_list, **context))
 
 
 def no_content() -> Response:

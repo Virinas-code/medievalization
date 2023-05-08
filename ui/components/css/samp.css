@@ -1,0 +1,11 @@
+samp {
+    display: block;
+    width: 100%;
+
+    overflow-y: scroll;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    background-color: var(--gruvbox-color-layer2);
+    font-family: "Ubuntu Mono", monospace;
+}

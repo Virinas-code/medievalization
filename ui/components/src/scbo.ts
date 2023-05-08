@@ -3,10 +3,16 @@ import { Component } from "./component.js";
 
 let ready: Event = new Event("medievalization.components.ready");
 
+enum Arrows {
+    RIGHT = "⯈",
+    UP = "⯅"
+}
+
 export class SmallCombo implements Component {
     element: HTMLElement;
     selector: HTMLElement;
     options: HTMLElement;
+    arrow: HTMLElement;
 
     open: boolean;
 
@@ -15,6 +21,7 @@ export class SmallCombo implements Component {
 
         this.selector = from.children[0] as HTMLElement;
         this.options = from.children[1] as HTMLElement;
+        this.arrow = document.querySelector(".scbo > div > span");
 
         this.selector.addEventListener("click", (ev: MouseEvent): void => this.selectorClicked(ev));
         this.open = false;
@@ -25,8 +32,10 @@ export class SmallCombo implements Component {
     selectorClicked(ev: MouseEvent): void {
         if (this.open) {
             this.options.classList.replace("scbo-open", "scbo-closed");
+            this.arrow.textContent = Arrows.RIGHT;
         } else {
             this.options.classList.replace("scbo-closed", "scbo-open");
+            this.arrow.textContent = Arrows.UP;
         }
         this.open = !this.open;
     }

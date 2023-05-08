@@ -1,0 +1,18 @@
+{
+    "register_title": {
+        "en": "Register",
+        "fr": "Créer un compte"
+    },
+    "register_new": {
+        "en": "Create a Medievalization account",
+        "fr": "Créez un compte Medievalization"
+    },
+    "lbl_mail": {
+        "en": "Email address",
+        "fr": "Addresse email"
+    },
+    "send": {
+        "en": "Register",
+        "fr": "S'inscrire"
+    }
+}

@@ -17,3 +17,6 @@ def load_trans() -> NamedTuple:
     Returns the ``trans`` object.
     """
     return objected(load())
+
+
+trans: NamedTuple = load_trans()

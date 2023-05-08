@@ -1,0 +1,11 @@
+/* MDV: This file was automatically generated. */
+
+a {
+    color: var(--gruvbox-color-blue);
+}
+
+a.external::after {
+    content: "";
+    font-family: "Meslo Icons";
+    margin-left: 3px;
+}

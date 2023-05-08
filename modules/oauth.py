@@ -27,8 +27,8 @@ class GoogleAuth:
         Loads tokens.
         """
         self.credentials: Optional[Credentials] = None
-        self.flow: InstalledAppFlow = (
-            InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
+        self.flow: InstalledAppFlow = InstalledAppFlow.from_client_secrets_file(
+            CREDENTIALS_FILE, SCOPES
         )
 
     def get_authorization_url(self, redirect_uri: str) -> str:

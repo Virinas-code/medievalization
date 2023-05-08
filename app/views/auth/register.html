@@ -1,0 +1,18 @@
+{% extends "small.html" %}
+
+{% block title %}{{ trans.auth.register.register_title }}{% endblock %}
+{% block subtitle %}{{ trans.auth.login.register_new }}{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+ <label for="username">{{ trans.auth.login.lbl_username }}</label>
+ <input type="text" autocomplete="username" id="username" name="username" />
+ <label for="mail">{{ trans.auth.register.lbl_mail }}</label>
+ <input type="text" autocomplete="email" id="mail" name="mail" />
+ <label for="password">{{ trans.auth.login.lbl_password }}</label>
+ <input type="password" autocomplete="new-password" id="password" name="password" />
+ {% if error|length %}<p class="error">{{ error }}</p>{% endif %}
+ <input type="submit" value="{{ trans.auth.register.send }}" />
+ <a href="register">{{ trans.auth.login.login_title }}</a>
+</form>
+{% endblock %}

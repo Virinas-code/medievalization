@@ -4,18 +4,27 @@ Medievalization
 
 Login module
 """
+from __future__ import annotations
+
 import csv
 import uuid
-from hashlib import sha512
 from typing import TYPE_CHECKING
 
+from argon2 import PasswordHasher
 from flask import session
+
+HASHER: PasswordHasher = PasswordHasher()
 
 if TYPE_CHECKING:
     from _csv import _reader as Reader  # pylint: disable=no-name-in-module
     from _csv import _writer as Writer  # pylint: disable=no-name-in-module
 
 CONFIRM_FILE: str = "data/auth/confirm.csv"
+
+with open("data/auth/users.csv", encoding="utf-8") as file:
+    reader: Reader = csv.reader(file, delimiter=",", quotechar='"')
+    passwords: list[list[str]] = list(reader)
+passwords_dict: dict[str, str] = dict(passwords)
 
 
 def login(username: str, password: str) -> bool:
@@ -26,13 +35,7 @@ def login(username: str, password: str) -> bool:
     :param str password: Password.
     :return bool: True if correct.
     """
-    with open("data/users.csv", encoding="utf-8") as file:
-        reader: Reader = csv.reader(file, delimiter=",", quotechar='"')
-        passwords: list[list[str]] = list(reader)
-    passwords_dict: dict[str, str] = dict(passwords)
-
-    hashed: str = sha512(password.encode()).hexdigest()
-    if passwords_dict[username] == hashed:
+    if HASHER.verify(passwords_dict[username], password):
         session["auth.username"] = username
         return True
     return False
@@ -49,8 +52,7 @@ def signup(username: str, password: str, email: str) -> None:
     random_uuid: str = str(uuid.uuid4())
     with open(CONFIRM_FILE, "a", encoding="utf-8") as file:
         file.write(
-            f"{username},{sha512(password.encode()).hexdigest()},{email},"
-            + f"{random_uuid}\n"
+            f"{username},{HASHER.hash(password.encode())},{email}," + f"{random_uuid}\n"
         )
 
 
@@ -77,6 +79,7 @@ def confirm(provided_uuid: str) -> bool:
     with open("data/auth/users.csv", "a", encoding="utf-8") as file:
         writer: Writer = csv.writer(file, delimiter=",", quotechar='"')
         writer.writerow(confirm_data[provided_uuid])
+    passwords_dict[confirm_data[provided_uuid][0]] = confirm_data[provided_uuid][2]
 
     # Remove row in csv lol
     del confirm_data[provided_uuid]
@@ -89,3 +92,13 @@ def confirm(provided_uuid: str) -> bool:
 
     # All right, you're an user now
     return True
+
+
+def exists(username: str) -> bool:
+    """
+    Check if an username is already used.
+
+    :param str username: Username.
+    :return bool: True if already used.
+    """
+    return username in passwords_dict.keys()

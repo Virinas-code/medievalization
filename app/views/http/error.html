@@ -1,0 +1,25 @@
+{% extends "small.html" %}
+
+{% set code = error.code|default('?') %}
+{% set name = error.name %}
+{% set description = error.description|default('Unknown error') %}
+
+{% block title %}{{ code }} - {{ name }}{% endblock %}
+{% block subtitle %}Error {{ code }}{% endblock %}
+
+{% block content %}
+<h3>{{ code }} {{ name }}</h3>
+<p>
+ {{ description }}
+</p>
+<p>
+ {{ trans.http.error.info }}
+ <a href="https://github.com/Virinas-code/medievalization/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc" class="external" target="_blank">GitHub Issues</a>
+</p>
+<details>
+ <summary>Technical information</summary>
+ <x-sample><samp>
+  {{ exception|join('<br />')|replace('\n', '<br />')|safe }}
+ </samp></x-sample>
+</details>
+{% endblock %}

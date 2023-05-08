@@ -1,0 +1,41 @@
+/* MDV: This file was automatically generated. */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > * {
+    margin-top: 5px;
+    padding: 5px;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+form > *:first-child {
+    margin-top: 0px;
+}
+
+form > input {
+    border-radius: 0px;
+
+    border: 1px solid var(--gruvbox-color-foreground);
+    background-color: var(--gruvbox-color-layer2);
+    color: var(--gruvbox-color-foreground);
+}
+
+form > input:focus {
+    outline: none;
+}
+
+form > input:hover {
+    filter: brightness(110%);
+}
+
+form > input[type="submit"] {
+    background-color: var(--gruvbox-color-layer3);
+}
+
+form > a {
+    text-align: center;
+}

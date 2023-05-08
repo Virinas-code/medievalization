@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block base_title %}{% block title %}ERR500{% endblock %}{% endblock %}
+
+{% block base_head %}
+<link rel="stylesheet" href="/public/ui/root/css/small.css" />
+
+<!-- block head -->
+{% block head %}
+{% endblock %}
+<!-- endblock -->
+
+{% endblock %}
+
+{% block base_body %}
+<main>
+ <header>
+  <h1>Medievalization</h1>
+  <h2>{% block subtitle %}{% endblock %}</h2>
+ </header>
+ <section>
+  <!-- block content -->
+  {% block content %}
+  {% endblock %}
+  <!-- endblock -->
+ </section>
+</main>
+{% endblock %}

@@ -3,7 +3,16 @@
 html {
     --material-color-background: #212529;
     --material-color-over: #343a40;
+    --material-color-layer: #495057;
     --game-color-background: #212529;
     --game-color-over: #200b0b;
     --game-color-foreground: #f8f9fa;
+
+    --gruvbox-color-foreground: #f9f5d7;
+    --gruvbox-color-layer0: #282828;
+    --gruvbox-color-layer1: #3c3836;
+    --gruvbox-color-layer2: #504945;
+    --gruvbox-color-layer3: #665c54;
+    --gruvbox-color-blue: #458588;
+    --gruvbox-color-blue-dark: #076678;
 }

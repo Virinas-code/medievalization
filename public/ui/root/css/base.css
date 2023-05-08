@@ -5,3 +5,9 @@
     bottom: 10px;
     right: 10px;
 }
+
+#flashed {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}

@@ -18,5 +18,9 @@
     "send": {
         "en": "Login",
         "fr": "Connexion"
+    },
+    "register": {
+        "en": "Create an account",
+        "fr": "Créer un compte"
     }
 }

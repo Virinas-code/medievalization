@@ -21,3 +21,56 @@
             format("truetype");
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: local("Ubuntu Mono"),
+        url("/public/fonts/ubuntu_mono/UbuntuMono-Regular.ttf")
+            format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: local("Ubuntu Mono"),
+        url("/public/fonts/ubuntu_mono/UbuntuMono-Italic.ttf")
+            format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: local("Ubuntu Mono"),
+        url("/public/fonts/ubuntu_mono/UbuntuMono-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu Mono";
+    src: local("Ubuntu Mono"),
+        url("/public/fonts/ubuntu_mono/UbuntuMono-BoldItalic.ttf")
+            format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/public/fonts/open_sans/OpenSans-VariableFont_wdth\,wght.ttf")
+        format("truetype-variations");
+    font-weight: 300 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Meslo Icons";
+    src: url("/public/fonts/meslo/MesloLGSNerdFont-Regular.ttf")
+        format("truetype");
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+}

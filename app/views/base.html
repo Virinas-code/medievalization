@@ -23,19 +23,37 @@
    <script type="module" src="/public/ui/components/src/components.js"></script>
    <script type="module" src="/public/ui/root/src/base.js"></script>
    
-   <!-- This block was dynamically generated with Jinja 2 -->
+   <!-- block base_head -->
    {% block base_head %}
    {% endblock %}
+   <!-- endblock -->
   </head>
   <body>
-   <!-- This block was dynamically generated with Jinja 2 -->
+   <!-- block base_body -->
    {% block base_body %}
    {% endblock %}
+   <!-- endblock -->
+
+   <div id="flashed" class="notifications">
+    {% for message in get_flashed_messages() %}
+     <div>
+      <div>
+       <span class="icon">󰋼</span>
+       <p>Information</p>
+       <button class="notifications-close icon"></button>
+      </div>
+      <div>
+       <p>{{ message }}</p>
+      </div>
+     </div>
+    {% endfor %}
+   </div>
 
    <div id="language" class="scbo">
     <div>
-     <img alt="Current language flag" />
+     <img alt="Current language flag" str="/public/images/flags/{{ current_language }}.svg"/>
      {{ languages[0].name }}
+     <span>▶</span>
     </div>
     <div class="scbo-list scbo-closed">
      {% for language in languages %}
