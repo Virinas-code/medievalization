@@ -4,7 +4,7 @@ Medievalization
 
 Error handler
 """
-from traceback import format_excepti  on
+from traceback import format_exception
 
 from flask import abort
 from werkzeug.exceptions import HTTPException
