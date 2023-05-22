@@ -39,7 +39,7 @@ include = ["README.md", "LICENSE"]
 [tool.poetry.dependencies]
 python = "^3.11"
 Flask = "^2.2.3"
-google-auth = "^2.17.2"
+google-auth = "^2.18.1"
 google-auth-oauthlib = "^1.0.0"
 google-auth-httplib2 = "^0.1.0"
 google-api-python-client = "^2.84.0"
